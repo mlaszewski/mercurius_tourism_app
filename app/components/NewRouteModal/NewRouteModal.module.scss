@@ -1,0 +1,323 @@
+@import 'app/styles/variables.scss';
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  padding: 1em;
+  max-width: 650px;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.closeButton {
+  font-size: 25px;
+  cursor: pointer;
+  color: $color-primary;
+}
+
+h2.header {
+  color: #333;
+  font-weight: bold;
+
+  & span {
+    color: $color-primary;
+  }
+}
+
+.info {
+  margin: 20px 0 10px 0;
+  font-size: 15px;
+}
+
+.map {
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input[type='text'],
+.input[type='number'],
+.input[type='time'],
+.textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.inputSelect {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 0;
+  margin: -2px;
+}
+
+.photos {
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between !important;
+}
+
+.uploadButton {
+  display: none;
+}
+
+.customUploadButton {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+
+  .addNewIcon {
+    font-size: 80px;
+    cursor: pointer;
+    color: $color-primary;
+    font-weight: 500;
+  }
+}
+
+.photoInput {
+  display: none;
+}
+
+.preview {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.textarea {
+  resize: none;
+  height: 150px;
+}
+
+.routeTime {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+
+  & .input {
+    margin-left: 20px;
+    width: 20%;
+  }
+}
+
+.routesLevel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.label {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.radio[type='radio'] {
+  margin-right: 5px;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #a6a4a4;
+  border-radius: 3px; // Make it square
+  outline: none;
+
+  &:checked {
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+  }
+
+  &:before {
+    background-color: #fff;
+  }
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  .removePoint {
+    cursor: pointer;
+    font-size: 20px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    color: #ff4747;
+    border: 1.9px solid #ff4747;
+    position: relative;
+    transform: translate(0, 5px);
+    margin: 0 10px 0 20px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 8px;
+      height: 1.3px;
+      background-color: #ff4747;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.points input {
+  margin-top: 3px;
+  max-width: 92%;
+}
+
+.dots {
+  position: absolute;
+  right: 14px;
+  top: 43px;
+  height: 25px;
+  border-right: 2px dashed #8bc34a;
+}
+
+.points button {
+  margin-top: 10px;
+  padding: 10px;
+  max-width: 92%;
+  background-color: $color-primary;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.startPoint,
+.middlePoint,
+.endPoint {
+  width: 30px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $color-primary;
+  color: $color-primary;
+  font-weight: 600;
+  padding: 13px;
+  margin-left: 20px;
+}
+
+.pointContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.customUploadButtonImage {
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.photoContainer {
+  position: relative;
+  border: 1px solid #e1e1e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden; // Add this line to hide any part of the image that exceeds the container size
+  width: 200px; // Set a fixed width
+  height: 200px; // Set a fixed height
+
+  img {
+    max-width: 100%; // Ensure the image doesn't exceed the container width
+    height: auto; // Add this line to maintain the image aspect ratio
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+
+.photos {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-top: 10px;
+
+  & .removeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.909);
+    color: $color-primary;
+    margin: 8px;
+    border-radius: 50%;
+    font-size: 17px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-primary;
+  }
+}
+
+.submitButton {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: $color-primary;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+
+  &.disabled {
+    background-color: $color-main-grey;
+    cursor: not-allowed;
+  }
+}
+
+.error {
+  border: 1px solid #eb5259 !important;
+}
+
+.errorMessage {
+  color: #eb5259;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.map {
+  position: relative;
+  height: 350px;
+
+  div {
+    width: 100%;
+  }
+}

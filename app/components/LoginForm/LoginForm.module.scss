@@ -1,0 +1,52 @@
+@import '../../styles/variables.scss';
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    label {
+      font-size: 1em;
+      font-weight: 600;
+    }
+
+    .textInput {
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 35px;
+    margin-top: 30px;
+
+    button {
+      flex: 1;
+      max-width: 250px;
+    }
+
+    button img {
+      margin-right: 10px;
+    }
+
+    button[type='submit'] {
+      color: white;
+    }
+  }
+}
+
+.validationError {
+  margin: 0;
+  color: $color-error;
+  font-size: 0.8em;
+  font-weight: 500;
+}

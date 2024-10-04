@@ -1,0 +1,5 @@
+{
+  "*.{ts,tsx,jsx,js}": ["npm run lint", "prettier --write"],
+  "*.{html,css,scss}": ["prettier --write"],
+  "*.json": "prettier --write"
+}

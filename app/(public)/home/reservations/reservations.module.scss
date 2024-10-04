@@ -1,0 +1,121 @@
+@import './variables.scss';
+
+.reservationsWrapper {
+  padding: 20px;
+  border-radius: 10px;
+
+  h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+
+  .highlight {
+    color: $color-primary;
+  }
+  .cancelled {
+    color: #ff4747;
+  }
+}
+.reservationItem {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.reservationContent {
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 10px;
+  flex: 1;
+  box-shadow:
+    rgba(147, 145, 145, 0) 0px 0px 6px,
+    rgba(0, 0, 0, 0.12) 0px 0px 2px;
+
+  h2 {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+  }
+
+  .userId,
+  .routeName {
+    font-weight: bold;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    color: #939393;
+  }
+
+  p {
+    color: #939393;
+  }
+  .reservationStrong {
+    color: black;
+  }
+}
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.acceptButton {
+  background-color: $color-primary;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.declineButton {
+  background-color: #ff4747;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.proposeButton {
+  background-color: white;
+  color: $color-primary;
+  border: 2px solid $color-primary;
+  padding: 8px 18px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  gap: 10px;
+
+  .formGroup {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+
+    &Column {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .select {
+      width: 100%;
+    }
+
+    button {
+      flex: 1;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.profileContainer {
+  padding: 20px;
+  text-align: left;
+  color: #000;
+  margin: 0 200px;
+
+  h1 {
+    font-size: 42px;
+    margin: 20px 0;
+
+    strong {
+      font-weight: bold;
+    }
+
+    .highlight {
+      color: #89bf15;
+    }
+  }
+}
+
+.profileDetails {
+  display: flex;
+  align-items: center;
+
+  .profileImageWrapper {
+    position: relative;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .profileImage {
+      width: 234px;
+      height: 234px;
+      border-radius: 50%;
+      border: 2px solid #89bf15;
+      object-fit: cover;
+    }
+
+    .cameraButton {
+      position: absolute;
+      bottom: -10px;
+      left: 20%;
+      transform: translateX(-50%);
+      background: #89bf15;
+      border: none;
+      border-radius: 50%;
+      padding: 5px;
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      img {
+        width: 24px;
+        height: 24px;
+        object-fit: fill;
+      }
+    }
+  }
+
+  .profileInfo {
+    text-align: left;
+
+    h2 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    p {
+      margin: 5px 0 0;
+      color: #939393;
+      font-size: 18px;
+    }
+  }
+}
+.bottomLinks {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.link {
+  color: #89bf15;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  transition: color 0.3s;
+}

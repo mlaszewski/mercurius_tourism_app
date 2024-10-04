@@ -1,0 +1,355 @@
+@import 'app/styles/variables.scss';
+
+.cardVertical {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  height: auto;
+  cursor: pointer;
+
+  .image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .content {
+    padding: 10px;
+
+    .title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .detail {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+
+        .icon {
+          margin-right: 4px;
+          color: $color-primary;
+          height: 25px;
+          width: 24px;
+        }
+      }
+
+      .difficulty {
+        font-weight: bold;
+      }
+
+      .medium {
+        color: #ffa500;
+      }
+
+      .hard {
+        color: #ff0000;
+      }
+    }
+  }
+}
+
+.cardHorizontal {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  height: 170px;
+
+  .imageContainer {
+    width: 200px;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .title {
+      font-size: 1.1em;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .detail {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+
+        .icon {
+          margin-right: 4px;
+          color: $color-primary;
+          height: 25px;
+          width: 24px;
+        }
+      }
+
+      .difficulty {
+        font-weight: bold;
+      }
+
+      .medium {
+        color: #ffa500;
+      }
+
+      .hard {
+        color: #ff0000;
+      }
+    }
+  }
+}
+
+.routeDetails {
+  .details {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-width: 500px;
+    padding: 0 1em;
+    gap: 1em;
+
+    .left {
+      flex: 1;
+
+      .mapImage {
+        width: 100%;
+        min-width: 500px;
+        height: 300px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+
+      .photos {
+        display: flex;
+        position: relative;
+
+        .photo {
+          position: relative;
+          height: 120px;
+          width: 25%;
+          border-radius: 10px;
+          margin-right: 10px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+
+    .right {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      min-width: 300px;
+
+      .header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .rating {
+          display: flex;
+          align-items: center;
+
+          .stars {
+            color: gold;
+            font-size: 18px;
+          }
+
+          .rating-value {
+            margin-left: 5px;
+            font-size: 18px;
+          }
+        }
+
+        h3 {
+          font-size: 36px;
+          font-weight: 800;
+          margin: 10px 0;
+
+          .highlight {
+            color: $color-primary;
+          }
+        }
+
+        .price {
+          font-size: 18px;
+          font-weight: 500;
+        }
+
+        .location {
+          display: flex;
+          font-size: 16px;
+          font-weight: 700;
+        }
+      }
+
+      .description {
+        margin: 20px 0;
+        font-size: 16px;
+        line-height: 22.4px;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .icon {
+          margin-right: 5px;
+        }
+
+        .time,
+        .difficulty {
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        .points {
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          font-weight: 700;
+        }
+
+        .highlight {
+          font-weight: bold;
+          color: $color-primary;
+        }
+      }
+
+      .action {
+        justify-self: flex-end;
+      }
+
+      .editButton {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: white;
+        color: $color-primary;
+        border: solid 1px $color-primary;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        width: 100%;
+        font-weight: bold;
+
+        &:hover {
+          background-color: #89bf15;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.difficultyIcon {
+  margin-right: 10px;
+}
+
+.moneyIcon {
+  display: inline;
+  vertical-align: unset;
+}
+
+.pinIcon {
+  margin-right: 4px;
+  color: $color-primary;
+  height: 25px;
+  width: 24px;
+}
+
+.popupH2 {
+  font-weight: bold;
+}
+
+.clockIcon {
+  display: inline;
+  vertical-align: middle;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+
+  .formGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+
+    .select {
+      width: 100%;
+    }
+  }
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.menuIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: $color-border-grey;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu {
+  position: absolute;
+  top: 35px;
+  right: 5px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background: #f2f2f2;
+  }
+}

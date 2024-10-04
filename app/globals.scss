@@ -1,0 +1,30 @@
+@import '~bootstrap/scss/bootstrap';
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: Inter, sans-serif;
+  font-style: normal;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 36px;
+}
+
+button:active {
+  filter: brightness(1.1);
+}
+
+button {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background-color: transparent;
+}

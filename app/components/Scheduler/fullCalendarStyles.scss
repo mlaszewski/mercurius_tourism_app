@@ -1,0 +1,150 @@
+@import '../../globals.scss';
+
+// FullCalendar styles
+.calendar-container {
+  --fc-header-color: #939393;
+  --fc-header-text-color: #89bf15;
+  --fc-event-background-color: #26a65b;
+  --fc-event-text-color: #343131;
+  --fc-border-color: #e1e1e1;
+  --fc-today-background-color: #f8f9fa;
+  --fc-today-border-color: #dee2e6;
+
+  width: 100%;
+  position: relative;
+  padding: 1em 3em 0 3em;
+
+  &:before {
+    content: 'Kalendarz';
+    font-size: 2.5em;
+    font-weight: 800;
+    color: var(--fc-header-text-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.2em 1.5em;
+    z-index: 1;
+  }
+
+  .fc {
+    & * {
+      border: 0;
+    }
+
+    a {
+      color: var(--fc-event-text-color);
+      text-decoration: none;
+    }
+
+    &-header-toolbar :last-child div {
+      display: flex !important;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        color: var(--fc-header-text-color);
+        padding: 10px 0;
+        text-align: center;
+        border: 2px solid var(--fc-header-text-color);
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 16px;
+        width: 200px;
+      }
+    }
+
+    &-button {
+      background-color: transparent;
+      border: 0;
+      span {
+        color: var(--fc-header-color);
+      }
+      &:hover {
+        background-color: transparent;
+      }
+
+      &:active {
+        background-color: transparent !important;
+        span {
+          color: var(--fc-header-color);
+        }
+      }
+    }
+
+    &-header {
+      background-color: var(--fc-header-color);
+      border-bottom: 1px solid var(--fc-border-color);
+    }
+
+    &-title {
+      color: var(--fc-header-text-color);
+    }
+
+    &-event {
+      color: var(--fc-event-text-color);
+    }
+
+    &-daygrid-button {
+      &:hover {
+        background-color: var(--fc-header-text-color);
+        color: var(--fc-header-color);
+      }
+    }
+
+    .fc-day-today {
+      background-color: transparent;
+      position: relative;
+      z-index: 10;
+
+      .fc-daygrid-day-top {
+        a {
+          color: white;
+          background: var(--fc-header-text-color);
+          text-align: center;
+          width: 2em;
+          border-radius: 1em;
+        }
+      }
+    }
+
+    .fc-day {
+      padding: 5px;
+      border: 0;
+      max-width: 10%;
+
+      .fc-daygrid-day-frame {
+        border: 1px solid var(--fc-border-color);
+        border-radius: 5px !important;
+        padding: 10px 10px;
+
+        .fc-daygrid-day-top {
+          font-size: 16px;
+          justify-content: center;
+        }
+
+        .fc-daygrid-day-events,
+        .fc-daygrid-day-bottom {
+          padding: 0 5px;
+        }
+      }
+    }
+    .fc-popover {
+      background-color: white;
+      border: 1px solid var(--fc-border-color);
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+    }
+  }
+
+  .fc-daygrid-day-frame {
+    min-width: 5vw;
+    min-height: 8vw;
+  }
+
+  //tbody[role="presentation"] {
+  //  tr:last-child{
+  //    display:none;
+  //  }
+  //}
+}

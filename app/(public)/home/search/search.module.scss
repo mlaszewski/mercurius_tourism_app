@@ -1,0 +1,149 @@
+@import '../../../styles/variables.scss';
+
+.mainContent {
+  padding: 20px;
+}
+
+.activityFeed {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.searchH1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.activityFeed .highlight {
+  color: $color-primary;
+}
+
+.regionRoutes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.highlight {
+  color: $color-primary;
+}
+.searchH2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #939393;
+  margin-bottom: 20px;
+}
+.routes,
+.guideRoutes {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+
+  .card {
+    box-shadow: $color-border-grey 0px 0px 10px;
+  }
+}
+
+.guides {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.region,
+.guideSearch {
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  margin: 5px 0;
+  border-radius: 10px;
+  border: 2px solid $color-secondary;
+
+  &:hover {
+    background-color: $color-secondary;
+  }
+}
+.regionPhoto,
+.guidePhotoSearch {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.guideNameSearch {
+  font-size: 14px;
+  color: #888;
+}
+
+.regionInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+
+  .regionName {
+    font-weight: bold;
+    color: black;
+    font-size: 1em;
+  }
+
+  .regionLocality {
+    font-size: 1em;
+    color: #888;
+  }
+}
+.guideFeed {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.guideProfile {
+  flex: 1;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.guidePhoto {
+  width: 300px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.guideName {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.guideInfo {
+  font-size: 18px;
+  color: #939393;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.guideBio {
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.guideRoutes {
+  flex: 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.regionLink,
+.guideLink {
+  text-decoration: none;
+  color: black;
+}

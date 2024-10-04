@@ -1,0 +1,56 @@
+@import '../../styles/variables.scss';
+
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //background-image: url('/images/background.jpg'); /* fallback */
+  background: linear-gradient(60deg, transparentize($color-primary, 0.5), rgba(0, 0, 0, 0) 100%), url('/images/background.jpg') center;
+  //background: url('/images/background.jpg') no-repeat left top, linear-gradient($color-primary, rgba(0, 0, 0, 0));
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  padding: 0 10%;
+  align-items: center;
+}
+
+.loginContainer {
+  flex: 2;
+  border-radius: 17px;
+  padding: 45px 30px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  max-width: 580px;
+
+  .logo {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .loginHeader {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+    font-weight: bold;
+  }
+
+  .text {
+    font-size: 0.8rem;
+    color: $color-main-grey;
+    margin-bottom: 0;
+  }
+
+  button {
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}

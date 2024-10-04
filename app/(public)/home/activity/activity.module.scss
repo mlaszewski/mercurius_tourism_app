@@ -1,0 +1,112 @@
+@import './variables.scss';
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.activityFeed {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.activityFeed h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.activityFeed .highlight {
+  color: $color-primary;
+}
+
+.feedItem {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.dateTime {
+  width: 100px;
+  font-size: 14px;
+  color: #777;
+  position: relative;
+}
+
+.feedContent {
+  border-width: 1px;
+  box-shadow:
+    rgba(147, 145, 145, 0) 0px 0px 6px,
+    rgba(0, 0, 0, 0.12) 0px 0px 2px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  flex: 1;
+}
+
+.feedContent h2 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+.feedContent .user-id {
+  color: $color-primary;
+  font-weight: bold;
+}
+
+.feedContent ul {
+  list-style-type: disc;
+  padding-left: 40px;
+  color: #939393;
+}
+.feedContent p {
+  color: #939393;
+}
+
+.dottedLine {
+  position: absolute;
+  left: 30%;
+  width: 2px;
+  height: 80%;
+  background-image: linear-gradient(to bottom, transparent 50%, $color-primary 50%);
+  background-size: 2px 10px;
+  background-repeat: repeat-y;
+}
+.paymentItem {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.dateTime {
+  width: 100px;
+  font-size: 14px;
+  color: #777;
+  position: relative;
+}
+
+.paymentContent {
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 10px;
+  flex: 1;
+  box-shadow:
+    rgba(147, 145, 145, 0) 0px 0px 6px,
+    rgba(0, 0, 0, 0.12) 0px 0px 2px;
+
+  h2 {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+  }
+
+  .userId {
+    color: $color-primary;
+    font-weight: bold;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    color: #939393;
+  }
+
+  p {
+    color: #939393;
+  }
+}

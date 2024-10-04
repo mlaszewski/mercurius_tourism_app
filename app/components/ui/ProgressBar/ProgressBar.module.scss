@@ -1,0 +1,30 @@
+@import '../../../styles/variables.scss';
+
+.progressBar {
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  height: 1rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  .progressBar__filler {
+    background-color: $color-secondary;
+    height: 100%;
+    transition: width 0.1s ease-in;
+  }
+  .progressBar__label {
+    color: white;
+    font-size: 0.8rem;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.progress {
+  background-color: $color-primary;
+  border-radius: 5px;
+  height: 100%;
+  width: 0;
+  transition: width 0.1s ease-in;
+}
